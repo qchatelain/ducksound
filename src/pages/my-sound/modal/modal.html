@@ -1,0 +1,48 @@
+<style>
+
+button {
+    background-color: #F6C346;
+    color: #fff;
+}
+
+</style>
+
+<ion-header>
+
+    <ion-toolbar color="ducksound">
+        <ion-title>
+            DuckSound
+        </ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="dismiss()">
+                <span ion-text color="black" showWhen="ios">Fermer</span>
+                <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+  
+</ion-header>
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label stacked>Nom du son</ion-label>
+        <ion-input [(ngModel)]="soundName" type="text" 
+        placeholder="Quel est le nom de votre son ?">
+        </ion-input>
+    </ion-item>
+
+    <button ion-button block (click)="takePicture()">
+        Prendre une photo
+    </button>
+    <img [src]="base64Image" *ngIf="base64Image" />
+
+    <button ion-button block *ngIf="recording == false && soundName" (click)="startRecord(soundName)">
+        <ion-icon name="mic"></ion-icon> &nbsp; Démarrer le record
+    </button>
+
+    <button ion-button block *ngIf="recording == true" (click)="stopRecord(soundName, base64Image)">
+        <ion-icon name="mic-off"></ion-icon> &nbsp; Arrêter le record
+    </button>
+
+</ion-content>

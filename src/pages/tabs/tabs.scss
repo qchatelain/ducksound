@@ -1,0 +1,11 @@
+page-tabs {
+    .tabs-ios .tab-button[aria-selected=true] .tab-button-icon,
+    .tabs-md .tab-button[aria-selected=true] .tab-button-icon,
+    .tabs-wp .tab-button[aria-selected=true] .tab-button-icon {
+        color: #F6C346;
+    }
+
+    .tabs-wp[tabsPlacement=bottom] .tab-button[aria-selected=true] {
+        border-top-color: #F6C346;
+    }
+}
