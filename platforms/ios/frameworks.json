@@ -1,0 +1,10 @@
+{
+    "WebKit.framework": 1,
+    "libz.tbd": 1,
+    "MediaPlayer.framework": 2,
+    "Foundation.framework": 1,
+    "AVFoundation.framework": 2,
+    "AudioToolbox.framework": 1,
+    "ImageIO.framework": 1,
+    "CoreLocation.framework": 1
+}
